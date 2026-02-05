@@ -12,9 +12,9 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
-      {/* Background Elements */}
+      {/* Background Elements - Capital Navy gradient */}
       <div className="absolute inset-0 gradient-dark" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-light/30 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-pulse" />
 
       {/* Grid Pattern */}
@@ -28,22 +28,22 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-5 py-2 glass rounded-full mb-8 animate-fadeInUp">
+        <div className="inline-flex items-center gap-2 px-5 py-2 glass-dark rounded-full mb-8 animate-fadeInUp">
           <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-          <span className="text-sm font-medium text-text-secondary">
+          <span className="text-sm font-medium text-text-light/80">
             Cayman Islands Regulated Fund
           </span>
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight animate-fadeInUp text-text-light" style={{ animationDelay: '0.1s' }}>
           Maximizing <span className="text-gradient-gold">Profits</span>
           <br />
-          Ensuring <span className="text-secondary">Protection</span>
+          Ensuring <span className="text-secondary-light">Protection</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto mb-10 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+        <p className="text-xl md:text-2xl text-text-light/80 max-w-3xl mx-auto mb-10 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           AIO Growth Capital Fund SPC is a self-managed Segregated Portfolio Company
           delivering exceptional returns through strategic global investments.
         </p>
@@ -52,14 +52,14 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
           <a
             href="#about"
-            className="px-8 py-4 gradient-gold text-primary-dark font-bold rounded-full shadow-gold hover:scale-105 transition-transform flex items-center gap-2 text-lg"
+            className="px-8 py-4 gradient-success text-text-light font-bold rounded-full shadow-emerald hover:scale-105 transition-transform flex items-center gap-2 text-lg"
           >
             Explore Our Vision
             <ArrowRight size={20} />
           </a>
           <a
             href="#investments"
-            className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-full hover:border-secondary hover:text-secondary transition-all backdrop-blur-sm"
+            className="px-8 py-4 border-2 border-accent text-accent font-semibold rounded-full hover:bg-accent hover:text-primary-dark transition-all backdrop-blur-sm"
           >
             View Investments
           </a>

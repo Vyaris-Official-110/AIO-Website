@@ -37,8 +37,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-bg-primary/95 backdrop-blur-xl border-b border-white/10 py-3'
-          : 'py-5'
+          ? 'bg-bg-primary/95 backdrop-blur-xl border-b border-border-navy shadow-navy py-3'
+          : 'bg-bg-primary py-5'
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -58,7 +58,7 @@ const Header = () => {
             <Link
               key={link.name}
               to={link.href}
-              className={`font-medium text-sm transition-colors relative group ${isActive(link.href) ? 'text-white' : 'text-text-secondary hover:text-white'
+              className={`font-medium text-sm transition-colors relative group ${isActive(link.href) ? 'text-primary' : 'text-text-secondary hover:text-primary'
                 }`}
             >
               {link.name}
@@ -83,7 +83,7 @@ const Header = () => {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden p-2 text-white z-[60]"
+          className="lg:hidden p-2 text-primary z-[60]"
         >
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -98,7 +98,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`fixed top-0 right-0 w-80 h-screen bg-bg-secondary border-l border-white/10 transform transition-transform duration-300 z-50 lg:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          className={`fixed top-0 right-0 w-80 h-screen bg-bg-primary border-l border-border-navy shadow-navy transform transition-transform duration-300 z-50 lg:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
         >
           <div className="pt-24 px-8">
@@ -106,7 +106,7 @@ const Header = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                className={`block py-4 text-lg font-medium transition-colors border-b border-white/5 ${isActive(link.href) ? 'text-secondary' : 'text-text-secondary hover:text-secondary'
+                className={`block py-4 text-lg font-medium transition-colors border-b border-border ${isActive(link.href) ? 'text-secondary' : 'text-text-secondary hover:text-secondary'
                   }`}
               >
                 {link.name}

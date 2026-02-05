@@ -18,13 +18,13 @@ const InvestorsPage = () => {
   return (
     <div className="pt-20">
       {/* Hero Banner */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-transparent" />
+      <section className="py-20 relative overflow-hidden bg-bg-secondary">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">
             Our Partners
           </span>
-          <h1 className="text-5xl md:text-6xl font-black mt-3 mb-6">
+          <h1 className="text-5xl md:text-6xl font-black mt-3 mb-6 text-primary">
             Our <span className="text-gradient-gold">Investors</span>
           </h1>
           <p className="text-text-secondary text-xl max-w-3xl mx-auto">
@@ -37,12 +37,12 @@ const InvestorsPage = () => {
       {/* Global Presence */}
       <section className="py-10">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 glass rounded-full">
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-bg-card shadow-navy border border-border rounded-full">
             <Target className="w-5 h-5 text-secondary" />
             <span className="text-text-secondary">
-              Investors from <span className="text-white font-semibold">North America</span>,{' '}
-              <span className="text-white font-semibold">Asia</span>, and{' '}
-              <span className="text-white font-semibold">Europe</span>
+              Investors from <span className="text-primary font-semibold">North America</span>,{' '}
+              <span className="text-primary font-semibold">Asia</span>, and{' '}
+              <span className="text-primary font-semibold">Europe</span>
             </span>
           </div>
         </div>
@@ -52,7 +52,7 @@ const InvestorsPage = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Investor Composition</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">Investor Composition</h2>
             <p className="text-text-secondary mt-4">Our diverse investor base by category</p>
           </div>
 
@@ -60,12 +60,12 @@ const InvestorsPage = () => {
             {investorTypes.map((type, index) => (
               <div
                 key={index}
-                className="bg-bg-card border border-border rounded-2xl p-6 hover:border-secondary/50 transition-all duration-300"
+                className="bg-bg-card border border-border shadow-navy rounded-2xl p-6 hover:border-secondary/50 transition-all duration-300"
               >
                 <type.icon className="w-12 h-12 text-secondary mb-4" />
-                <h4 className="font-bold text-lg mb-2">{type.label}</h4>
+                <h4 className="font-bold text-lg mb-2 text-primary">{type.label}</h4>
                 <p className="text-text-secondary text-sm mb-4">{type.description}</p>
-                <div className="relative h-3 bg-white/10 rounded-full overflow-hidden">
+                <div className="relative h-3 bg-primary/10 rounded-full overflow-hidden">
                   <div
                     className="absolute left-0 top-0 h-full gradient-gold rounded-full transition-all duration-1000"
                     style={{ width: `${type.percentage}%` }}
@@ -82,7 +82,7 @@ const InvestorsPage = () => {
       <section className="py-20 bg-bg-secondary">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">
               <TrendingUp className="inline w-8 h-8 mr-2 text-secondary" />
               AUM Growth Trajectory
             </h2>
@@ -97,19 +97,19 @@ const InvestorsPage = () => {
                 key={index}
                 className={`text-center p-10 rounded-3xl ${item.status === 'Active'
                     ? 'bg-secondary/10 border-2 border-secondary'
-                    : 'bg-bg-card border border-border'
+                    : 'bg-bg-card border border-border shadow-navy'
                   }`}
               >
                 <p className="text-text-secondary text-sm mb-2">{item.year}</p>
-                <div className={`text-5xl font-black mb-3 ${item.status === 'Active' ? 'text-secondary' : 'text-white'
+                <div className={`text-5xl font-black mb-3 ${item.status === 'Active' ? 'text-secondary' : 'text-primary'
                   }`}>
                   {item.aum}
                 </div>
                 <span className={`inline-block text-xs px-4 py-1.5 rounded-full mb-4 ${item.status === 'Active'
-                    ? 'bg-secondary text-primary-dark'
+                    ? 'bg-secondary text-text-light'
                     : item.status === 'Target'
-                      ? 'bg-green-500/20 text-green-400'
-                      : 'bg-blue-500/20 text-blue-400'
+                      ? 'bg-secondary/20 text-secondary'
+                      : 'bg-primary/20 text-primary'
                   }`}>
                   {item.status}
                 </span>
@@ -124,23 +124,23 @@ const InvestorsPage = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Why Invest With <span className="text-secondary">AIO</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">Why Invest With <span className="text-secondary">AIO</span></h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="glass rounded-2xl p-8 text-center">
+            <div className="bg-bg-card shadow-navy border border-border rounded-2xl p-8 text-center">
               <div className="text-4xl font-black text-gradient-gold mb-3">15%+</div>
-              <h4 className="font-bold mb-2">Consistent Returns</h4>
+              <h4 className="font-bold mb-2 text-primary">Consistent Returns</h4>
               <p className="text-text-secondary text-sm">Proven track record of delivering above-market returns</p>
             </div>
-            <div className="glass rounded-2xl p-8 text-center">
+            <div className="bg-bg-card shadow-navy border border-border rounded-2xl p-8 text-center">
               <div className="text-4xl font-black text-gradient-gold mb-3">Global</div>
-              <h4 className="font-bold mb-2">Diversified Portfolio</h4>
+              <h4 className="font-bold mb-2 text-primary">Diversified Portfolio</h4>
               <p className="text-text-secondary text-sm">Investments across multiple sectors and geographies</p>
             </div>
-            <div className="glass rounded-2xl p-8 text-center">
+            <div className="bg-bg-card shadow-navy border border-border rounded-2xl p-8 text-center">
               <div className="text-4xl font-black text-gradient-gold mb-3">Expert</div>
-              <h4 className="font-bold mb-2">Professional Team</h4>
+              <h4 className="font-bold mb-2 text-primary">Professional Team</h4>
               <p className="text-text-secondary text-sm">Decades of combined investment management experience</p>
             </div>
           </div>
@@ -148,17 +148,17 @@ const InvestorsPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-bg-secondary">
+      <section className="py-20 gradient-dark">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Become an <span className="text-secondary">Investor</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-text-light">
+            Become an <span className="text-secondary-light">Investor</span>
           </h2>
-          <p className="text-text-secondary text-lg mb-8">
+          <p className="text-text-light/70 text-lg mb-8">
             Join our growing community of investors and benefit from strategic global investments.
           </p>
           <Link
             to="/contact"
-            className="px-8 py-4 gradient-gold text-primary-dark font-bold rounded-full shadow-gold hover:scale-105 transition-transform inline-flex items-center gap-2"
+            className="px-8 py-4 gradient-success text-text-light font-bold rounded-full shadow-emerald hover:scale-105 transition-transform inline-flex items-center gap-2"
           >
             Get Started <ArrowRight size={18} />
           </Link>

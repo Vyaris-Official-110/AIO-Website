@@ -32,13 +32,13 @@ const TeamPage = () => {
   return (
     <div className="pt-20">
       {/* Hero Banner */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-transparent" />
+      <section className="py-20 relative overflow-hidden bg-bg-secondary">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">
             Leadership
           </span>
-          <h1 className="text-5xl md:text-6xl font-black mt-3 mb-6">
+          <h1 className="text-5xl md:text-6xl font-black mt-3 mb-6 text-primary">
             Meet Our <span className="text-gradient-gold">Key Executives</span>
           </h1>
           <p className="text-text-secondary text-xl max-w-3xl mx-auto">
@@ -55,25 +55,25 @@ const TeamPage = () => {
             {executives.map((exec, index) => (
               <div
                 key={index}
-                className="bg-bg-card border border-border rounded-3xl p-8 md:p-12"
+                className="bg-bg-card border border-border shadow-navy rounded-3xl p-8 md:p-12"
               >
                 <div className="grid md:grid-cols-3 gap-8">
                   {/* Avatar & Info */}
                   <div className="md:col-span-1">
-                    <div className="w-32 h-32 gradient-gold rounded-2xl flex items-center justify-center mb-6">
-                      <span className="text-4xl font-black text-primary-dark">
+                    <div className="w-32 h-32 gradient-success rounded-2xl flex items-center justify-center mb-6">
+                      <span className="text-4xl font-black text-text-light">
                         {exec.name.split(' ').map(n => n[0]).join('')}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold">{exec.name}</h3>
+                    <h3 className="text-2xl font-bold text-primary">{exec.name}</h3>
                     <p className="text-secondary font-semibold mb-4">{exec.role}</p>
 
                     {/* Social Links */}
                     <div className="flex gap-3">
-                      <a href="#" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center hover:bg-secondary hover:text-primary-dark transition-all">
+                      <a href="#" className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary hover:bg-secondary hover:text-text-light transition-all">
                         <Linkedin size={18} />
                       </a>
-                      <a href="#" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center hover:bg-secondary hover:text-primary-dark transition-all">
+                      <a href="#" className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary hover:bg-secondary hover:text-text-light transition-all">
                         <Mail size={18} />
                       </a>
                     </div>
@@ -85,10 +85,10 @@ const TeamPage = () => {
                       {exec.fullBio}
                     </p>
 
-                    <h4 className="font-bold text-lg mb-4">Key Expertise</h4>
+                    <h4 className="font-bold text-lg mb-4 text-primary">Key Expertise</h4>
                     <div className="grid sm:grid-cols-2 gap-3">
                       {exec.highlights.map((highlight, i) => (
-                        <div key={i} className="flex items-center gap-3 p-3 bg-white/5 rounded-xl">
+                        <div key={i} className="flex items-center gap-3 p-3 bg-bg-secondary rounded-xl">
                           <span className="w-2 h-2 bg-secondary rounded-full" />
                           <span className="text-text-secondary text-sm">{highlight}</span>
                         </div>
@@ -105,8 +105,8 @@ const TeamPage = () => {
       {/* Team Philosophy */}
       <section className="py-16 bg-bg-secondary">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="glass rounded-3xl p-10 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Our Team Philosophy</h2>
+          <div className="bg-bg-card shadow-navy border border-border rounded-3xl p-10 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">Our Team Philosophy</h2>
             <p className="text-text-secondary text-lg leading-relaxed">
               Our experienced professionals ensure that the time, effort, investments,
               and most importantly, the trust that our investors have reposed in us
@@ -118,17 +118,17 @@ const TeamPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 gradient-dark">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to <span className="text-secondary">Partner</span> with Us?
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-text-light">
+            Ready to <span className="text-secondary-light">Partner</span> with Us?
           </h2>
-          <p className="text-text-secondary text-lg mb-8">
+          <p className="text-text-light/70 text-lg mb-8">
             Get in touch with our team to discuss investment opportunities.
           </p>
           <Link
             to="/contact"
-            className="px-8 py-4 gradient-gold text-primary-dark font-bold rounded-full shadow-gold hover:scale-105 transition-transform inline-flex items-center gap-2"
+            className="px-8 py-4 gradient-success text-text-light font-bold rounded-full shadow-emerald hover:scale-105 transition-transform inline-flex items-center gap-2"
           >
             Contact Our Team <ArrowRight size={18} />
           </Link>

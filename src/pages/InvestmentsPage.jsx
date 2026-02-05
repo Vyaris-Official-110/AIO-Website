@@ -23,13 +23,13 @@ const InvestmentsPage = () => {
   return (
     <div className="pt-20">
       {/* Hero Banner */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-transparent" />
+      <section className="py-20 relative overflow-hidden bg-bg-secondary">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">
             Our Portfolio
           </span>
-          <h1 className="text-5xl md:text-6xl font-black mt-3 mb-6">
+          <h1 className="text-5xl md:text-6xl font-black mt-3 mb-6 text-primary">
             Strategic <span className="text-gradient-gold">Investments</span>
           </h1>
           <p className="text-text-secondary text-xl max-w-3xl mx-auto">
@@ -43,15 +43,15 @@ const InvestmentsPage = () => {
       <section className="py-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="glass rounded-2xl p-8 text-center">
+            <div className="bg-bg-card shadow-navy border border-border rounded-2xl p-8 text-center">
               <div className="text-5xl font-black text-gradient-gold mb-2">15%+</div>
               <p className="text-text-secondary">Current Investor Returns</p>
             </div>
-            <div className="glass rounded-2xl p-8 text-center">
+            <div className="bg-bg-card shadow-navy border border-border rounded-2xl p-8 text-center">
               <div className="text-5xl font-black text-gradient-gold mb-2">Listed</div>
               <p className="text-text-secondary">& Unlisted Securities</p>
             </div>
-            <div className="glass rounded-2xl p-8 text-center">
+            <div className="bg-bg-card shadow-navy border border-border rounded-2xl p-8 text-center">
               <div className="text-5xl font-black text-gradient-gold mb-2">Global</div>
               <p className="text-text-secondary">Diversified Portfolio</p>
             </div>
@@ -63,7 +63,7 @@ const InvestmentsPage = () => {
       <section className="py-20 bg-bg-secondary">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">
               <MapPin className="inline w-8 h-8 mr-2 text-secondary" />
               Investment Sectors
             </h2>
@@ -76,14 +76,14 @@ const InvestmentsPage = () => {
             {sectors.map((sector, index) => (
               <div
                 key={index}
-                className="group relative bg-bg-card border border-border rounded-2xl p-8 hover:border-secondary/50 transition-all duration-300 cursor-default overflow-hidden"
+                className="group relative bg-bg-card border border-border shadow-navy rounded-2xl p-8 hover:border-secondary/50 transition-all duration-300 cursor-default overflow-hidden"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${sector.color} opacity-0 group-hover:opacity-10 transition-opacity`} />
                 <div className="relative z-10">
-                  <div className="w-16 h-16 mb-4 rounded-xl bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 mb-4 rounded-xl bg-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <sector.icon className="w-8 h-8 text-secondary" />
                   </div>
-                  <h4 className="font-bold text-xl mb-2">{sector.name}</h4>
+                  <h4 className="font-bold text-xl mb-2 text-primary">{sector.name}</h4>
                   <p className="text-text-secondary">{sector.description}</p>
                 </div>
               </div>
@@ -96,7 +96,7 @@ const InvestmentsPage = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">
               <MapPin className="inline w-8 h-8 mr-2 text-secondary" />
               Target Regions
             </h2>
@@ -112,11 +112,11 @@ const InvestmentsPage = () => {
                 className="bg-bg-card border border-border rounded-2xl p-6 hover:border-secondary/50 hover:bg-bg-card-hover transition-all duration-300"
               >
                 <span className="text-5xl mb-4 block">{region.flag}</span>
-                <h4 className="font-bold text-lg mb-1">{region.name}</h4>
+                <h4 className="font-bold text-lg mb-1 text-primary">{region.name}</h4>
                 <p className="text-text-secondary text-sm mb-3">{region.description}</p>
                 <span className={`text-xs px-3 py-1 rounded-full ${region.focus === 'Primary'
                     ? 'bg-secondary/20 text-secondary'
-                    : 'bg-white/10 text-text-muted'
+                    : 'bg-primary/10 text-text-muted'
                   }`}>
                   {region.focus} Focus
                 </span>
@@ -127,24 +127,24 @@ const InvestmentsPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-bg-secondary">
+      <section className="py-20 gradient-dark">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Interested in Our <span className="text-secondary">Portfolio</span>?
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-text-light">
+            Interested in Our <span className="text-secondary-light">Portfolio</span>?
           </h2>
-          <p className="text-text-secondary text-lg mb-8">
+          <p className="text-text-light/70 text-lg mb-8">
             Learn more about investment opportunities or speak with our team about partnership possibilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/investors"
-              className="px-8 py-4 gradient-gold text-primary-dark font-bold rounded-full shadow-gold hover:scale-105 transition-transform inline-flex items-center gap-2"
+              className="px-8 py-4 gradient-success text-text-light font-bold rounded-full shadow-emerald hover:scale-105 transition-transform inline-flex items-center gap-2"
             >
               For Investors <ArrowRight size={18} />
             </Link>
             <Link
               to="/contact"
-              className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-full hover:border-secondary hover:text-secondary transition-all"
+              className="px-8 py-4 border-2 border-accent text-accent font-semibold rounded-full hover:bg-accent hover:text-primary-dark transition-all"
             >
               Contact Us
             </Link>
